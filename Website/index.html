@@ -43,6 +43,7 @@
             .hero-text {
                 font-size: 0.9rem;
             }
+
         }
     </style>
 </head>
@@ -52,6 +53,7 @@
             <a href="index.html" class="nav-link active" data-section="home">🏠 الصفحة الرئيسية</a>
             <a href="books.html" class="nav-link" data-section="books">📚 الكتب</a>
             <a href="authors.html" class="nav-link" data-section="authors">👤 المؤلفون</a>
+            <a href="libraryai.html" class="nav-link" data-section="authors">LibraryAI 💻</a>
         </div>
     </nav>
 
@@ -65,6 +67,7 @@
                 <p class="hero-text">مرحباً بكم في موقعنا الإلكتروني حيث المعرفة والثقافة تلتقيان</p>
             </div>
         </section>
+
 
         <blockquote class="twitter-tweet"><p lang="vi" dir="ltr">Coming Soon / قريباً<br>🫡 <a href="https://t.co/40whmoOLyf">pic.twitter.com/40whmoOLyf</a></p>&mdash; STACKS the NULLS (@STACKStheNULLS) <a href="https://twitter.com/STACKStheNULLS/status/1875178842576560219?ref_src=twsrc%5Etfw">January 3, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -80,6 +83,18 @@
         </section>
     </main>
 
+
+    <script>
+        let currentIndex = 0;
+    
+        function slideQuotes(direction) {
+            const container = document.getElementById('slider-container');
+            const totalItems = container.children.length;
+            currentIndex = (currentIndex + direction + totalItems) % totalItems;
+            container.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
     <script src="script.js"></script>
+    <script src="favicon.js"></script> 
 </body>
 </html>
